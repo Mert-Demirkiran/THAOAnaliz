@@ -13,7 +13,7 @@ X = data[['Gun']].values
 y = data['Close'].values
 
 model = LinearRegression()
-model.fit(X, y) # AI burada geçmiş veriden trendi öğreniyor
+model.fit(X, y)
 
 tahmin_gunu = np.array([[len(data)]])
 gelecek_fiyat = model.predict(tahmin_gunu)
@@ -32,3 +32,4 @@ plt.ylabel("Fiyat (TL)")
 plt.legend()
 plt.grid(True)
 plt.show()
+
